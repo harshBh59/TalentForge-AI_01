@@ -1,0 +1,41 @@
+# Core app
+streamlit>=1.35
+pandas
+plotly
+
+# Auth
+bcrypt
+
+# NLP
+spacy>=3.7
+transformers>=4.40
+torch
+
+# Semantic matching
+sentence-transformers
+
+# Resume file parsing
+PyPDF2
+python-docx
+
+# Vision (emotion detection)
+opencv-python
+fer
+Pillow
+tensorflow            # required by fer (fer does not install it itself)
+moviepy<2              # fer imports moviepy.editor, removed in moviepy 2.x
+setuptools<81          # fer imports pkg_resources, removed in setuptools 81+
+
+# Speech
+librosa
+soundfile
+pyttsx3
+
+# ---------------------------------------------------------------
+# After installing requirements, download the spaCy language model:
+#   python -m spacy download en_core_web_sm
+#
+# First run will also download HuggingFace/sentence-transformers/FER/
+# Whisper model weights locally (cached under ~/.cache) — this needs
+# an internet connection once, after which everything runs offline.
+# ---------------------------------------------------------------
